@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import style from './App.css';
+import { TextField } from '@material-ui/core';
+import { Button } from '@material-ui/core'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" id={style.main}>
+      <TextField
+          id="url"
+          label="URL"
+          style={{ margin: 8 }}
+          placeholder="Write the URL to be converted"
+          fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="filled"
+        />
+        <Button>GENERATE!</Button>
     </div>
   );
 }
